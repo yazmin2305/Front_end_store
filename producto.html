@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front End Store</title>
+    
+    <!-- Normalize -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">    
+    <!-- Fuente  staatliches-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <!-- Llamada a hoja de estilos -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header class="header">
+        <!-- El logotipo siempre lleva a la pagina principal -->
+        <a href="index.html">
+            <!-- "alt" texto alternativo que se carga en caso de que la imagen no -->
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>React JS</h1>
+
+        <div class="camisa">
+            <img class="camisa__imagen" src="img/3.jpg" alt="Imagen del Porducto">
+            <div class="camisa__contenido">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Curabitur ante justo, luctus sit amet ipsum nec, convallis ultrices orci. 
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                </p>
+                <form class="formulario">
+                    <select class="formulario__campo">
+                        <!-- Seleccionado por defecto pero va a estar desactivada esta opcion -->
+                        <option disabled selected>--Seleccionar Talla--</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                    <!-- tipo de campo, nombre de fondo, cantidad minima, aumenta de 1 en 1 -->
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1" step="1">
+                    <!-- "submit" envia los datos a un servidor -->
+                    <input class="formulario__submit" type="submit" value="Agregar al carrito">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Front End Store <span>&#128151;</span> Todos los derechos Reservados 2022.</p>
+    </footer>
+    
+</body>
+</html>

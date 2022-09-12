@@ -1,0 +1,360 @@
+:root{
+    --primario: #9C27B0;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233, 287, 2);
+    --blanco: #FFF;
+    --negro: #000;
+    --rosado: #AD60C3;
+    --morado: #580F5B;
+    --fuentePrincipal: 'Staatliches', cursive;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    /* interlineado de la base de la fuente */
+    line-height: 1.5;
+}
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+.contenedor{
+    max-width: 100rem;
+    /* Centrar contenido */
+    margin: 0 auto;
+}
+h1,h2,h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+/* h2,h3{
+    text-align: center;
+    color:  rgba(14, 12, 6, 0.9);
+    font-family: var(--fuentePrincipal);
+} */
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+
+/* Header */
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header__logo{
+    /* Margen de arriba y abajo para el logo */
+    margin: 3rem 0;
+}
+
+/* Footer */
+.footer{
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+    margin-top: 2rem;
+
+}
+.footer__texto{
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+/* Navegacion */
+.navegacion{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    /* Separa los elementos que estan juntos en la cantidad deseada */
+    gap: 2rem; /*Separacion forma nueva*/
+}
+.navegacion__enlace{
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;  
+    /* forma antigua de separar los elementos inline */
+    /* margin-right: 2rem; */
+}
+/* seudoselector que selecciona el ultimo elemento para quitarle la separacion */
+/* .navegacion__enlace:last-of-type{
+    margin-right: 0;
+} */
+
+/* Indica en qe pagina esta posicionado depensiendo al enlace que ingreso el usuario
+    ya que el enlace se pinta de un color diferente */
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: var(--secundario);
+    /* height: 100%; */
+}
+
+/* Grid */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* column y row gap juntos */
+    gap: 3rem;
+}
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+/* Productos */
+.producto{
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+
+.producto__nombre{
+    font-size: 4rem;
+
+}
+.producto__precio{
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    /* interlineado */
+    line-height: 1.2;
+}
+
+/* Graficos */
+.grafico{
+    /* altura minima */
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    /* para que la imagen tome todo el espacio disponible */
+    background-size: cover;
+    /* Se aplica esta regla en el padre ya que se encuentra en ambos hijos */
+    grid-column: 1 / 3;
+}
+.grafico--camisas{
+    /* grid-column: 1 / 3; */
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    /* grid-column: 1 / 3; */
+    grid-row: 8 / 9;
+}
+@media (min-width: 768px) {
+    .grafico--node{
+        background-color: var(--primarioOscuro);
+        grid-column: 2 / 4;
+        grid-row: 5 / 6;
+    }
+}
+
+/* Nosotros */
+
+/* para que la imagen quede arriba del texto al momento de hacerlo responsive */
+.nosotros{
+    /* gracias al display gris de puede posicionar en que fila y columna se requiere */
+    display: grid;
+    /* se le pone auto para que no queden espacion esntre la imagen y el texto al momento de usarlo en otros dispositivos mas pequeños */
+    grid-template-rows: repeat(2, auto);
+    /* separacion */
+    padding: 2rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .nosotros{
+        text-align: justify;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* separar la imagen del texto */
+        column-gap: 3rem;
+    }
+}
+
+.nosotros__imagen{
+    /* pone la imagen en la parte de arriba al abrir en pantallas menores a 768px*/
+    grid-row: 1 / 2;
+}
+@media (min-width: 768px) {
+    .nosotros__imagen{
+        /* pone la imagen en la parte derecha al abrir la pagina en pantallas grandes */
+        grid-column: 2 / 3;
+    }   
+}
+
+/* Bloques */
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* separacion */
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .bloques{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bloque{
+    text-align: center;
+}
+.bloque__titulo{
+    /* separacion */
+    margin: 0;
+}
+
+/* Pagina del producto */
+.camisa{
+    /* para que la imagen tenga un poco de separacion */
+    padding: 2rem;
+}
+@media (min-width: 768px) {
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+    }
+}
+
+.formulario{
+    display: grid;
+    /* "minmax" distribuye el espacio de tal forma que se adapta perfecto a la vista movil */
+    /* Asi exista un espacio de 0px siempre va a haber una distribucion de dos columnas cada una de 1fr */
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 2rem;
+}
+.formulario__submit{
+    border: none;
+    padding: 1.5rem;
+    font-size: 2.2rem;
+    width: 100%;
+    background-color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+    /* animacion sobre cual valor, en este caso background-color */
+    /* tipo de animacion "ease" */
+    /* transition: background-color .3s ease; */
+    transition: font-size .3s ease;
+    grid-column: 1/3;
+}
+/* recupera la mano como cursor al ubicarse en cierto lugar ya que con el submit se pierde */
+.formulario__submit:hover{
+    font-size: 2.6rem;
+    cursor: pointer;
+    /* degradado o animacion */
+    background-color: var(--secundarioOscuro);
+}
+.formulario__campo:hover{
+    background-color: var(--rosado);
+}
+.formulario__campo{
+    border: 1rem solid var(--primarioOscuro);
+    /* toma el mismo color de fondo usando transparent */
+    background-color: var(--primario);
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+    /* quita la flecha hacia abajo que se encuentra en el seleccionador */
+    appearance: none;
+    text-align: center;
+}
+
+/* Tarjeta con efecto para las imagenes */
+.glass{
+    display: flex;
+    flex-direction: column; 
+    gap: 5px;    
+    width: 293px;
+    height: 113px;
+    margin-top: 170px;
+    position: absolute;
+
+    /* efecto de fondo (cristal)*/
+    background-color: rgba(122, 61, 146, 0.4);
+    backdrop-filter: blur(1px);
+
+    text-align: center;
+    /* tiempo en que se va a producr la animacion */
+    transition: 1.5s all;
+    /* toda la informacion se muestre solo cuando se pone el cursor encima */
+    overflow: hidden;
+}
+
+.glass h2,h3{
+    color: rgba(27, 2, 26, 0.8);
+}
+.titulo1,
+.titulo2 {
+    margin-top: .4rem ;
+    margin-bottom: 0rem;
+}
+.talla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--morado);
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--blanco);
+    font-size: 2rem;
+}
+.contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.glass:hover{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    height: 282px;
+    width: 293px;
+    margin-top: 0;
+    background-color: rgba(199, 108, 218, 0.4);
+    transition: 1.5s all;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.glass:hover .tallas{
+    transition: 1.5s all;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.precio{
+    font-weight: 700;
+    color: var(--primarioOscuro)
+}
+

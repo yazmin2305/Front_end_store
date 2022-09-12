@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front End Store</title>
+
+    <!-- Normalize -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Fuente  staatliches-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <!-- Llamada a hoja de estilos -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <!-- El logotipo siempre lleva a la pagina principal -->
+        <a href="index.html">
+            <!-- "alt" texto alternativo que se carga en caso de que la imagen no -->
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>Nuestros productos</h1>
+
+        <div class="grid">
+            <div class="producto">
+
+                <div class="glass">
+                    <h2 class="titulo1">Vue Js</h2>
+                    <h3 class="titulo2">Camiseta Hombre</h3>
+                    <p class="tallas">Tallas disponibles</p>
+                    <div class="contenido">
+                        <a href="#" class="talla">S</a>
+                        <a href="#" class="talla">M</a>
+                        <a href="#" class="talla">L</a>
+                        <a href="#" class="talla">XL</a>
+                    </div>
+                    <p class="precio">$50.000</p>
+                </div>
+                <a href="producto.html">
+                    <div class="imagen__producto">
+                        <img src="img/1.jpg" alt="imagen camisa">
+                    </div>
+                </a>
+            </div>
+            
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/1.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">VueJS</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/2.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">AngularJS</p> -->
+                        <!-- <p class="producto__precio">$25.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/3.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">ReactJS</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/4.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">VRedux</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/5.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">Node.js</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/6.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">SASS</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/7.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">HTML5</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/8.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">GitHub</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/9.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">BulmaCSS</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/10.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">TypeScript</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/11.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">Drupal</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/12.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">JavaScript</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/13.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">GraphQL</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="img/14.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <!-- <p class="producto__nombre">WordPress</p> -->
+                        <!-- <p class="producto__precio">$50.000</p> -->
+                    </div>
+                </a>
+            </div>
+            <!--.producto-->
+
+            <div class="grafico grafico--camisas"></div>
+            <div class="grafico grafico--node"></div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Front End Store <span>&#128151;</span> Todos los derechos Reservados 2022.</p>
+    </footer>
+
+</body>
+
+</html>
